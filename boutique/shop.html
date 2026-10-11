@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr" style="">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Oswald:wght@600;700&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../nav.css">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "inverse-surface": "#e5e1e6", "on-error": "#690005", "on-tertiary-fixed": "#1a1c1c", "on-error-container": "#ffdad6", "on-background": "#e5e1e6", "primary": "#ffb4a8", "tertiary-fixed": "#e2e2e2", "primary-fixed": "#ffdad4", "on-primary-container": "#fff2f0", "tertiary": "#c6c6c7", "inverse-on-surface": "#303033", "surface-variant": "#353438", "on-tertiary": "#2f3131", "outline-variant": "#5e3f3a", "background": "#131316", "surface-container": "#201f22", "secondary-fixed": "#dce1ff", "secondary": "#b6c4ff", "on-surface": "#e5e1e6", "on-primary-fixed": "#410100", "secondary-container": "#0056fd", "primary-fixed-dim": "#ffb4a8", "surface-container-highest": "#353438", "tertiary-fixed-dim": "#c6c6c7", "surface-container-high": "#2a2a2d", "inverse-primary": "#c00500", "secondary-fixed-dim": "#b6c4ff", "surface-container-lowest": "#0e0e11", "error": "#ffb4ab", "on-tertiary-container": "#f5f5f5", "error-container": "#93000a", "surface-bright": "#39393c", "on-secondary": "#00277f", "on-tertiary-fixed-variant": "#454747", "surface": "#131316", "on-secondary-fixed": "#001550", "primary-container": "#e10600", "on-primary": "#680200", "on-secondary-container": "#e4e7ff", "surface-container-low": "#1b1b1e", "on-secondary-fixed-variant": "#003ab2", "on-surface-variant": "#e9bcb5", "outline": "#af8781", "surface-dim": "#131316", "on-primary-fixed-variant": "#930300", "tertiary-container": "#6f7070", "surface-tint": "#ffb4a8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem" }, "fontFamily": { "headline-md": ["Oswald"], "headline-sm": ["Oswald"], "label-md": ["Inter"], "display-lg": ["Oswald"], "display-xl-mobile": ["Oswald"], "body-lg": ["Inter"], "headline-lg": ["Oswald"], "body-md": ["Inter"], "display-xl": ["Oswald"], "label-lg": ["Inter"], "data-metric": ["Oswald"], "display-lg-mobile": ["Oswald"], "body-sm": ["Inter"], "title-md": ["Inter"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.03em", "fontWeight": "700" }], "display-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.03em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "data-metric": ["28px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header class="" id="header">
+
+    <!-- LOGO -->
+    <a href="../index.html" class="logo-link">
+      <img src="../assest/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+      <ul>
+        <li>
+          <a href="../index.html">HOME</a>
+        </li>
+
+        <li>
+          <a href="../articles/actualites.html">ACTUALIT?S</a>
+        </li>
+
+        <li>
+          <a href="../event/events.html">?V?NEMENTS</a>
+        </li>
+
+        <li>
+          <a href="shop.html" class="active">BOUTIQUE</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+
+      <a href="../search.html" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </a>
+
+      <a href="cart.html" aria-label="Cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+  <main class="w-full  bg-surface">
+    <div
+      class="flex flex-col w-full bg-[#FFFFFF] text-inverse-on-surface antialiased selection:bg-primary-container selection:text-on-primary">
+      <!-- 1. HERO SECTION -->
+      <section class="relative w-full overflow-hidden bg-[#FFFFFF]">
+        <div class="relative w-full h-[540px] lg:h-[620px]">
+          <img alt="Athlète d'élite NIZAL en préparation intense au bord du ring"
+            class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out hover:scale-100"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNg_07yl-mOq4P3KeH4BMLZVzNIaqetxRSKJSLP0znH5NnCQtL6-7nL3u-kxa3tp-ihnAku-tEBFNnX70k5LRa9MAYDaUVPaZghtyhbyQtTj55tdqPbyNtnIpGd73yIZk2Az6dNgGVQnsKH9ypdjESc3x2BnA7Y5ismFEtx4zmI9ZGwtVYAX9UYIERgljQ2reFWeKtj37x5GVeXgFhqWoOqxXrOmiRPili-ijlSvzNNDxbETsdRl2i">
+          <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/5 w-full"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-90 lg:opacity-40">
+          </div>
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full max-w-[1440px] mx-auto px-margin">
+              <div class="max-w-2xl space-y-space-md">
+
+                <h1 class="font-display-xl text-display-xl uppercase tracking-tight text-[#131316] leading-none">
+                  Équipez-vous pour <span class="text-primary-container">le combat.</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-[#454747] max-w-xl">
+                  Conçus pour la haute performance, testés par nos athlètes d'élite sur le ring et dans la cage.
+                  Résistance certifiée aux chocs de niveau international.
+                </p>
+                <div class="pt-space-sm flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+                  <a class="inline-flex items-center justify-center gap-space-sm px-8 py-4 bg-primary-container text-white font-headline-sm text-headline-sm uppercase tracking-wider rounded shadow-lg shadow-primary-container/20 hover:bg-[#c00500] hover:tracking-widest transition-all duration-300"
+                    href="#produits">
+                    <span class="">Découvrir les produits</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                  <a class="inline-flex items-center justify-center gap-space-xs px-6 py-4 bg-white/90 backdrop-blur-sm text-[#131316] font-title-md text-title-md rounded shadow-sm hover:bg-[#f5f5f5] transition-colors"
+                    href="#categories">
+                    <span class="material-symbols-outlined text-[20px] text-secondary-container">tune</span>
+                    <span class="">Explorer les gammes</span>
+                  </a>
+                </div>
+                <div
+                  class="pt-space-md flex flex-wrap items-center gap-y-2 gap-x-6 font-label-md text-label-md text-[#6f7070] uppercase tracking-wider">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary-container text-[18px]">local_shipping</span>
+                    <span class="">Livraison Express Arène</span>
+                  </div>
+                  <span class="text-tertiary-fixed-dim">/</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-secondary-container text-[18px]">verified_user</span>
+                    <span class="">Matériaux Certifiés</span>
+                  </div>
+                  <span class="text-tertiary-fixed-dim">/</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary-container text-[18px]">shield</span>
+                    <span class="">Garantie 2 Ans</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2. CATEGORIES SECTION -->
+      <section class="w-full py-space-xl bg-[#FFFFFF]" id="categories">
+        <div class="w-full max-w-[1440px] mx-auto px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-6 h-[3px] bg-primary-container inline-block"></span>
+                <span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Sélection par
+                  discipline</span>
+              </div>
+              <h2 class="font-display-lg text-display-lg uppercase text-[#131316]">
+                Catégories d'Équipement
+              </h2>
+            </div>
+
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- Catégorie 1: Gants -->
+            <a class="group relative p-space-lg bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]"
+              href="./shop.html?category=homme#produits">
+              <div
+                class="absolute top-0 left-0 right-0 h-[3px] bg-transparent group-hover:bg-primary-container transition-colors duration-300">
+              </div>
+              <div class="space-y-space-md">
+                <div
+                  class="w-14 h-14 rounded bg-primary-container/10 text-primary-container flex items-center justify-center transition-colors group-hover:bg-primary-container group-hover:text-white">
+                  <span class="material-symbols-outlined text-[32px]">sports_mma</span>
+                </div>
+                <div>
+                  <span class="font-label-md text-label-md uppercase tracking-widest text-[#6f7070]">01 ·</span>
+                  <h3
+                    class="font-headline-lg text-headline-lg uppercase text-[#131316] group-hover:text-primary-container transition-colors mt-0.5">
+                    homme Vêtements</h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-[#525263]">Gants de boxe pro, MMA sparring, mitaines de frappe
+                  et bandages de combat.</p>
+              </div>
+              <div
+                class="mt-space-lg pt-space-sm flex items-center justify-between text-secondary-container font-label-lg text-label-lg uppercase">
+                <span class="">Parcourir</span>
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+              </div>
+            </a>
+            <!-- Catégorie 2: Vêtements -->
+            <a class="group relative p-space-lg bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]"
+              href="./shop.html?category=femme#produits">
+              <div
+                class="absolute top-0 left-0 right-0 h-[3px] bg-transparent group-hover:bg-secondary-container transition-colors duration-300">
+              </div>
+              <div class="space-y-space-md">
+                <div
+                  class="w-14 h-14 rounded bg-secondary-container/10 text-secondary-container flex items-center justify-center transition-colors group-hover:bg-secondary-container group-hover:text-white">
+                  <span class="material-symbols-outlined text-[32px]">apparel</span>
+                </div>
+                <div>
+                  <span class="font-label-md text-label-md uppercase tracking-widest text-[#6f7070]">02 ·
+                  </span>
+                  <h3
+                    class="font-headline-lg text-headline-lg uppercase text-[#131316] group-hover:text-secondary-container transition-colors mt-0.5">
+                    femme Vêtements</h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-[#525263]">Rashguards ultra-respirants, shorts de combat
+                  multi-extensibles, hoodies d'échauffement.</p>
+              </div>
+              <div
+                class="mt-space-lg pt-space-sm flex items-center justify-between text-secondary-container font-label-lg text-label-lg uppercase">
+                <span class="">Parcourir</span>
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+              </div>
+            </a>
+            <!-- Catégorie 3: Protections -->
+            <a class="group relative p-space-lg bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]"
+              href="./shop.html?category=enfant#produits">
+              <div
+                class="absolute top-0 left-0 right-0 h-[3px] bg-transparent group-hover:bg-primary-container transition-colors duration-300">
+              </div>
+              <div class="space-y-space-md">
+                <div
+                  class="w-14 h-14 rounded bg-primary-container/10 text-primary-container flex items-center justify-center transition-colors group-hover:bg-primary-container group-hover:text-white">
+                  <span class="material-symbols-outlined text-[32px]">security</span>
+                </div>
+                <div>
+                  <span class="font-label-md text-label-md uppercase tracking-widest text-[#6f7070]">03 ·
+                  </span>
+                  <h3
+                    class="font-headline-lg text-headline-lg uppercase text-[#131316] group-hover:text-primary-container transition-colors mt-0.5">
+                    enfants Vêtements</h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-[#525263]">Casques intégraux sparring, protège-tibias renforcés
+                  EVA, protège-dents thermomoulables.</p>
+              </div>
+              <div
+                class="mt-space-lg pt-space-sm flex items-center justify-between text-secondary-container font-label-lg text-label-lg uppercase">
+                <span class="">Parcourir</span>
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+      <!-- 3. PRODUITS POPULAIRES SECTION -->
+      <section class="w-full py-space-xl bg-[#FBFBFB]" id="produits">
+        <div class="w-full max-w-[1440px] mx-auto px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-6 h-[3px] bg-primary-container inline-block"></span>
+                <span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Catalogue
+                  Homologué</span>
+              </div>
+              <h2 class="font-display-lg text-display-lg uppercase text-[#131316]">
+                Produits Populaires
+              </h2>
+              <p class="font-body-md text-body-md text-[#525263] mt-1">
+                L'équipement officiel des champions NIZAL.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 bg-[#FFFFFF] p-1 rounded-lg shadow-sm" id="product-filters">
+              <button class="px-4 py-2 bg-primary-container text-white font-label-lg text-label-lg uppercase rounded"
+                type="button" data-filter="all" aria-pressed="true">Tous</button>
+              <button
+                class="px-4 py-2 text-[#525263] hover:text-[#131316] font-label-lg text-label-lg uppercase rounded transition-colors"
+                type="button" data-filter="femme" aria-pressed="false">femme
+              </button>
+              <button
+                class="px-4 py-2 text-[#525263] hover:text-[#131316] font-label-lg text-label-lg uppercase rounded transition-colors"
+                type="button" data-filter="homme" aria-pressed="false">
+                homme
+              </button>
+              <button
+                class="px-4 py-2 text-[#525263] hover:text-[#131316] font-label-lg text-label-lg uppercase rounded transition-colors"
+                type="button" data-filter="enfant" aria-pressed="false">
+                enfant
+              </button>
+
+            </div>
+          </div>
+          <!-- Grid 6 Produits -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="product-grid">
+            <!-- Produit 1 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="homme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-primary-container text-white font-label-md text-label-md uppercase tracking-wider rounded z-10">Bestseller</span>
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img alt="Paire de gants NIZAL Pro Fight 16oz en cuir noir texturé avec coutures renforcées rouges"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2n7CpWczJIqYkSOzcd8wSF6UnsY1AI6JqMB6Djw7_If3eW0YI4lAdqAUE8xcpJGKMB8n8ENFhXxBmKNPAw-WUdzER7PXZeU0cbnti-nk-j4wg42HxNd-dOuxqq_wT6zGXPIvnItxt8xCIxWsfS95yUTQt8uOyCZBEyKQla0_U940pvjydEEhqqR3Ct3mzC2k7PsoSsPbsyMvAdqYhPTU-L-RzPe55NJwrBRXscQOn23LZYZfYcQTI">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Gants &amp; Combat</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(48)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Gants NIZAL Pro Fight 16oz
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Mousse triple densité, cuir haute résistance et
+                    maintien carpien millimétré.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">119,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 2 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="femme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-secondary-container text-white font-label-md text-label-md uppercase tracking-wider rounded z-10">Nouveau</span>
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img
+                  alt="Rashguard NIZAL Strike Pro Compression à manches longues noir mat et motifs géométriques athlétiques rouges"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KHsmfsXqD4TKhcPIJwqUVXTTjGdwgwHemc3LKAacQxH3NXf3FxXcekOC_jgq-Jbco4nXmbJWpf05DiKHwhNrsaApyQZmBgxEabqc064vKNUxV7YZ6rEBAVKMvAQe2_r5GjOHNAJrPTdmhNjXctGJgq9KVZL09pgxVkPd8v1Q1CEK8gqc5xx0NCZ45XOM4zyhVMAR3OmRVePygZAU7Ccskv-tN3IayN7latQVNknZxLsV2k-D9_UZ">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Vêtements · MMA</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(32)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-secondary-container transition-colors">
+                    Rashguard NIZAL Strike Pro Compression
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Tissu 4-way stretch antibactérien, coutures plates
+                    anti-irritation homologué grappling.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">59,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 3 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="enfant">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-[#131316] text-white font-label-md text-label-md uppercase tracking-wider rounded z-10">Certifié
+                  Compétition</span>
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img
+                  alt="Ensemble pack protection NIZAL avec casque de sparring intégral et protège-tibias renforcés en cuir et détails rouges"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWyrGDNuK2XDwwFpUA9iGfxfqQ9Nm0J_eQnfqEzBUrpXXdq8aWYxBF9npBeo3Vu-NddGo2s1Sc6V9IkT8z62Gcex-7AHJg2Izcr8VhYRHgXuS2lH0QUO_LNczSjgZlU12-O5kyuwJ5B8nURFX5NZitVBi0PU2cNg_7niUQUjcUNJxVwQkgINZS2e44TgjBIXIuorylXMg0u1exrRHrIQ37nXkC47IuMvTmw1qj6VoC7iE7lGOLZ8MA">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Packs · Sécurité</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(61)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Pack Protection Arène : Casque &amp; Tibias Cuir
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">L'ensemble d'entraînement ultime pour les
+                    sparrings intensifs sans concession.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">145,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 4 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="homme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img
+                  alt="Gants de sparring NIZAL Hexa-Shield noirs avec système d'amorti renforcé sur le dessus de la main"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2n7CpWczJIqYkSOzcd8wSF6UnsY1AI6JqMB6Djw7_If3eW0YI4lAdqAUE8xcpJGKMB8n8ENFhXxBmKNPAw-WUdzER7PXZeU0cbnti-nk-j4wg42HxNd-dOuxqq_wT6zGXPIvnItxt8xCIxWsfS95yUTQt8uOyCZBEyKQla0_U940pvjydEEhqqR3Ct3mzC2k7PsoSsPbsyMvAdqYhPTU-L-RzPe55NJwrBRXscQOn23LZYZfYcQTI">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Gants &amp; Sparring</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(19)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Gants de Sparring NIZAL Hexa-Shield
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Conçus pour préserver les articulations lors des
+                    sessions lourdes au sac et aux paos.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">89,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 5 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="femme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img
+                  alt="Short de combat NIZAL Octagon Elite à fentes latérales d'aisance et cordon de serrage renforcé"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KHsmfsXqD4TKhcPIJwqUVXTTjGdwgwHemc3LKAacQxH3NXf3FxXcekOC_jgq-Jbco4nXmbJWpf05DiKHwhNrsaApyQZmBgxEabqc064vKNUxV7YZ6rEBAVKMvAQe2_r5GjOHNAJrPTdmhNjXctGJgq9KVZL09pgxVkPd8v1Q1CEK8gqc5xx0NCZ45XOM4zyhVMAR3OmRVePygZAU7Ccskv-tN3IayN7latQVNknZxLsV2k-D9_UZ">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Vêtements · Fightshorts</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(27)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-secondary-container transition-colors">
+                    Short de Combat NIZAL Octagon Elite
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Découpe anatomique favorisant les coups de pied
+                    hauts et la mobilité au sol sans entrave.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">54,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 6 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="enfant">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+                <img
+                  alt="Protège-tibias NIZAL Iron-Flex haute absorption avec manchons néoprène et fermetures velcro industrielles"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWyrGDNuK2XDwwFpUA9iGfxfqQ9Nm0J_eQnfqEzBUrpXXdq8aWYxBF9npBeo3Vu-NddGo2s1Sc6V9IkT8z62Gcex-7AHJg2Izcr8VhYRHgXuS2lH0QUO_LNczSjgZlU12-O5kyuwJ5B8nURFX5NZitVBi0PU2cNg_7niUQUjcUNJxVwQkgINZS2e44TgjBIXIuorylXMg0u1exrRHrIQ37nXkC47IuMvTmw1qj6VoC7iE7lGOLZ8MA">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Protections · Muay-Thaï / Kick</span>
+                    <div class="flex items-center gap-1 text-primary-container">
+                      <span class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span>
+                      <span class="font-bold text-[#131316]">5.0</span>
+                      <span class="text-[#8E8E9F]">(53)</span>
+                    </div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Protège-Tibias NIZAL Iron-Flex
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Couverture intégrale du métatarse et de la crête
+                    tibiale avec profil antidérapant.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div>
+                    <span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix officiel</span>
+                    <span class="font-data-metric text-data-metric text-[#131316]">79,00 DA</span>
+                  </div>
+                  <button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button">
+                    <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                    <span class="">Ajouter</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Produit 7 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="homme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button"><span class="material-symbols-outlined text-[18px]">favorite</span></button><img
+                  alt="Short de combat NIZAL Fight Elite Pro en tissu technique noir et motifs géométriques rouges"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKzojUtXYFHgTM0gs-eXKHpwnmkqmEYsZ5dJnbJltjfILEGNWQefvtcpEAYTJPKiPlkI2QmE03Tvnbt119zE1I1jpfgR9HAmSqRmq9PPUzgInQlLnd9nN-Rejs_cXXpi1iFZD2mavAoXZR3wiVlAmy0d6yaIlY-9NlrbD5YMrQQ8Qtc3WNH-fYn6Y53GRBMyyiMxt1zMwlyYwUuqdJr6wSra_DixxrzHuZy6MX3K3hoAqSdhU1pKKV">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Vêtements · MMA</span>
+                    <div class="flex items-center gap-1 text-primary-container"><span
+                        class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span><span
+                        class="font-bold text-[#131316]">5.0</span><span class="text-[#8E8E9F]">(42)</span></div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Short de Combat Fight Elite Pro</h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Tissu indéchirable ultra-léger avec fentes
+                    d'aisance latérales pour frappes explosives.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div><span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix
+                      officiel</span><span class="font-data-metric text-data-metric text-[#131316]">65,00 DA</span>
+                  </div><button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span
+                      class="">Ajouter</span></button>
+                </div>
+              </div>
+            </div><!-- Produit 8 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="homme femme enfant">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <button aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button"><span class="material-symbols-outlined text-[18px]">favorite</span></button><img
+                  alt="Pack accessoires NIZAL avec bandes de boxe 4.5m et corde à sauter pro speed jump rope"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa-1D5wqAxv9YLx3ViyswMyU41PxserpZTPUreHiq-Efxbzx-GO8obXbuthX4f-y9bvRqeuipVl3_J4jBf-S6VGxLCnb8ZghTtBL2Bb_NMej2dSwAlSwj3aAO6TXKo4F3a2RQW9RzyZoue-APXcZtHIDKTbJkQwoROga_MvmwY8P-PlrbVQ5UJWpf-hC1ZbTajJvnDTRBqst_JCUaM5-FCXb_g6fqcPkT3DdClP8u8rSfu4Gig2ClV">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Accessoires · Entraînement</span>
+                    <div class="flex items-center gap-1 text-primary-container"><span
+                        class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span><span
+                        class="font-bold text-[#131316]">5.0</span><span class="text-[#8E8E9F]">(38)</span></div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-primary-container transition-colors">
+                    Pack Accessoires : Bandes 4.5m &amp; Corde Pro</h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Bandes semi-élastiques respirantes et corde de
+                    vitesse à roulements rapides en aluminium.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div><span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix
+                      officiel</span><span class="font-data-metric text-data-metric text-[#131316]">35,00 DA</span>
+                  </div><button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span
+                      class="">Ajouter</span></button>
+                </div>
+              </div>
+            </div><!-- Produit 9 -->
+            <div
+              class="group bg-[#FFFFFF] rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer"
+              data-category="homme">
+              <div
+                class="relative bg-[#F4F4F6] p-space-md aspect-[4/3] flex items-center justify-center overflow-hidden">
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-secondary-container text-white font-label-md text-label-md uppercase tracking-wider rounded z-10">Nouveau</span><button
+                  aria-label="Favoris"
+                  class="absolute top-3 right-3 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-[#525263] hover:text-primary-container hover:bg-white transition-colors z-10 shadow-sm"
+                  type="button"><span class="material-symbols-outlined text-[18px]">favorite</span></button><img
+                  alt="Chaussures de boxe montantes NIZAL Speed-Knock en cuir mat noir avec détails rouges aérodynamiques"
+                  class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0GuyMVx6ox9qy9Qmq2VSIOE7SGFUOs7MUCCz663gpeZgVlKJKwhAvTeLhPvtZWbHgDvjyWNECYVQYJgbZH8op2qt3xZ1WIT9eOutXKGcmiTZGoQTSO75628TJKoL7F2JlIxrS1Aet-KG40f6Q4qgtCqQcpkYy5Mvv0lJRD05BxTk8jYd8UPgExClj4NeO6JUvtKZ6xO930mjNFyAY5BStH7yD6cd_HbKUqYtp9FxJ80VcF-bfhJAp">
+              </div>
+              <div class="p-space-lg flex flex-col flex-1 justify-between gap-space-md">
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between text-[#6f7070] font-label-md text-label-md uppercase">
+                    <span class="">Équipement · Boxe Anglaise</span>
+                    <div class="flex items-center gap-1 text-primary-container"><span
+                        class="material-symbols-outlined text-[15px]"
+                        style="font-variation-settings: 'FILL' 1;">star</span><span
+                        class="font-bold text-[#131316]">5.0</span><span class="text-[#8E8E9F]">(29)</span></div>
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm uppercase text-[#131316] group-hover:text-secondary-container transition-colors">
+                    Chaussures de Boxe NIZAL Speed-Knock</h3>
+                  <p class="font-body-sm text-body-sm text-[#525263]">Maintien de cheville ultra-ferme, semelle fine
+                    antidérapante pour pivots foudroyants.</p>
+                </div>
+                <div class="pt-space-sm flex items-center justify-between gap-space-sm">
+                  <div><span class="block font-label-md text-label-md uppercase text-[#6f7070]">Prix
+                      officiel</span><span class="font-data-metric text-data-metric text-[#131316]">135,00 DA</span>
+                  </div><button
+                    class="inline-flex items-center gap-2 px-5 py-3 bg-[#131316] text-white hover:bg-primary-container font-label-lg text-label-lg uppercase tracking-wider rounded transition-colors duration-200 shadow-md"
+                    type="button"><span class="material-symbols-outlined text-[18px]">add_shopping_cart</span><span
+                      class="">Ajouter</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low  shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+    <div class="max-w-7xl mx-auto px-gutter py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm"><span
+              class="font-headline-md text-headline-md uppercase tracking-wider text-on-surface">NIZAL</span><span
+              class="w-2 h-2 rounded-full bg-primary-container"></span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Le monde des sports de combat, réuni au
+            même endroit. Tournois, classements et billetterie officielle.</p>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Navigation</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="actualites" href="shop.html">Actualités</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="athletes" href="shop.html">Athlètes</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="evenements" href="shop.html">Événements</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="boutique" href="shop.html">Boutique</a></nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Informations</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="a-propos" href="shop.html">À propos</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="contact" href="shop.html">Contact</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="faq" href="shop.html">FAQ</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="conditions-generales" href="shop.html">Conditions générales</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="politique-de-confidentialite" href="shop.html">Politique de confidentialité</a></nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Suivez-nous</span>
+          <div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><a
+              class="hover:text-on-surface transition-colors" href="shop.html">Instagram</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">Facebook</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">YouTube</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">TikTok</a></div>
+        </div>
+      </div>
+      <div
+        class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+        <p class="">© 2026 NIZAL. Tous droits réservés.</p>
+        <p class="uppercase tracking-wider font-label-sm text-label-sm text-on-surface-variant">Plateforme Combat Sports
+          Haute Performance</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../nav.js"></script>
+  <script>
+    const productGrid = document.getElementById('product-grid');
+    const productFilters = document.getElementById('product-filters');
+    const productCards = productGrid ? Array.from(productGrid.children) : [];
+    const filters = productFilters ? Array.from(productFilters.querySelectorAll('[data-filter]')) : [];
+    productGrid?.querySelectorAll('[aria-label="Favoris"]').forEach((button) => button.remove());
+    productGrid?.querySelectorAll('.material-symbols-outlined').forEach((icon) => {
+      if (icon.textContent.trim() === 'star') icon.parentElement.remove();
+    });
+    const requestedCategory = new URLSearchParams(window.location.search).get('category');
+    const validCategories = filters.map((filter) => filter.dataset.filter);
+    const initialCategory = requestedCategory && validCategories.includes(requestedCategory)
+      ? requestedCategory
+      : 'all';
+
+    function applyProductFilter(category) {
+      productCards.forEach((card) => {
+        const categories = (card.dataset.category || '').split(' ');
+        card.classList.toggle('hidden', category !== 'all' && !categories.includes(category));
+      });
+
+      filters.forEach((filter) => {
+        const isActive = filter.dataset.filter === category;
+        filter.classList.toggle('bg-primary-container', isActive);
+        filter.classList.toggle('text-white', isActive);
+        filter.classList.toggle('text-[#525263]', !isActive);
+        filter.classList.toggle('hover:text-[#131316]', !isActive);
+        filter.setAttribute('aria-pressed', String(isActive));
+      });
+    }
+
+    applyProductFilter(initialCategory);
+
+    filters.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        applyProductFilter(filter.dataset.filter);
+      });
+    });
+
+    productCards.forEach((card) => {
+      const title = card.querySelector('h3');
+      card.tabIndex = 0;
+      card.setAttribute('role', 'link');
+      if (title) card.setAttribute('aria-label', `Voir le produit ${title.textContent.trim()}`);
+
+      card.addEventListener('click', () => {
+        window.location.href = './proudct.html';
+      });
+
+      card.querySelectorAll('button:not([aria-label="Favoris"])').forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          window.location.href = './proudct.html';
+        });
+      });
+
+      card.addEventListener('keydown', (event) => {
+        if (event.target !== card || (event.key !== 'Enter' && event.key !== ' ')) return;
+        event.preventDefault();
+        window.location.href = './proudct.html';
+      });
+    });
+  </script>
+</body>
+
+</html>

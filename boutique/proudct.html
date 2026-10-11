@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="../nav.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#e10600", "on-secondary": "#00277f", "on-secondary-fixed-variant": "#003ab2", "surface-container-highest": "#353438", "surface-dim": "#131316", "tertiary": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "on-tertiary-container": "#f5f5f5", "on-primary-fixed": "#410100", "on-error-container": "#ffdad6", "on-primary": "#680200", "on-secondary-fixed": "#001550", "on-error": "#690005", "inverse-on-surface": "#303033", "on-tertiary": "#2f3131", "background": "#131316", "on-primary-fixed-variant": "#930300", "secondary-fixed-dim": "#b6c4ff", "error": "#ffb4ab", "surface-container-lowest": "#0e0e11", "on-surface": "#e5e1e6", "on-background": "#e5e1e6", "surface-variant": "#353438", "on-tertiary-fixed-variant": "#454747", "surface-container-high": "#2a2a2d", "surface-container-low": "#1b1b1e", "outline": "#af8781", "secondary": "#b6c4ff", "secondary-container": "#0056fd", "on-secondary-container": "#e4e7ff", "surface": "#131316", "surface-container": "#201f22", "tertiary-fixed": "#e2e2e2", "outline-variant": "#5e3f3a", "error-container": "#93000a", "inverse-primary": "#c00500", "primary-fixed-dim": "#ffb4a8", "surface-bright": "#39393c", "primary": "#ffb4a8", "inverse-surface": "#e5e1e6", "surface-tint": "#ffb4a8", "on-primary-container": "#fff2f0", "primary-fixed": "#ffdad4", "tertiary-container": "#6f7070", "secondary-fixed": "#dce1ff", "on-surface-variant": "#e9bcb5", "tertiary-fixed-dim": "#c6c6c7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-sm": "1rem" }, "fontFamily": { "data-metric": ["Oswald"], "display-xl-mobile": ["Oswald"], "headline-md": ["Oswald"], "display-lg-mobile": ["Oswald"], "headline-sm": ["Oswald"], "display-lg": ["Oswald"], "body-md": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Oswald"], "display-xl": ["Oswald"], "title-md": ["Inter"], "label-md": ["Inter"], "label-lg": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "data-metric": ["28px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700" }], "display-xl-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.03em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-xl": ["64px", { "lineHeight": "68px", "letterSpacing": "0.04em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }] } } } }</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <header class="" id="header">
+
+    <!-- LOGO -->
+    <a href="../index.html" class="logo-link">
+      <img src="../assest/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+      <ul>
+        <li>
+          <a href="../index.html">HOME</a>
+        </li>
+
+        <li>
+          <a href="../articles/actualites.html">ACTUALIT?S</a>
+        </li>
+
+        <li>
+          <a href="../event/events.html">?V?NEMENTS</a>
+        </li>
+
+        <li>
+          <a href="shop.html" class="active">BOUTIQUE</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+
+      <a href="../search.html" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </a>
+
+      <a href="cart.html" aria-label="Cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+  <main class="w-full bg-surface min-h-screen">
+    <div class="flex flex-col w-full bg-white text-stone-900 selection:bg-red-600 selection:text-white">
+
+      <!-- ================= HERO PRODUCT VIEW (2-COLUMN LIGHT THEME) ================= -->
+      <section class="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <!-- LEFT: INTERACTIVE PHOTO GALLERY -->
+          <div class="lg:col-span-7 flex flex-col gap-4">
+            <!-- Main Image Display Container with Studio Backdrop -->
+            <div
+              class="relative w-full aspect-square bg-[#FBFBFC] rounded-xl overflow-hidden border border-stone-200/80 shadow-[0_4px_24px_rgba(0,0,0,0.04)] flex items-center justify-center group">
+              <!-- Overlaid technical badge -->
+              <div class="absolute top-4 left-4 z-10 flex flex-col gap-1.5">
+                <span
+                  class="inline-flex items-center gap-1.5 px-3 py-1 bg-stone-900/90 backdrop-blur-sm text-white text-[11px] font-semibold tracking-wider uppercase rounded shadow-sm">
+                  <span class="material-symbols-outlined text-[14px] text-red-500">verified</span>
+                  Qualité
+                </span>
+
+              </div>
+
+              <!-- Main Active Image -->
+              <img alt="Gants de boxe NIZAL Pro en cuir véritable noir avec surpiqûres rouges haute résistance"
+                class="w-full h-full object-contain p-6 md:p-10 transition-all duration-300 ease-out group-hover:scale-[1.02]"
+                id="mainProductImage"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSsqilLkCswKZdKagjUJSgTJR4IKLoR1ZNDklIFTFQKesxrVi0SFRKNx1uOJnCdo3o4cQEg2KWvGHo1SaCjpcXSnSueqy2Y6hW8MtlsU1ChkB_ifywpwG2gvQNbU3aInCeSdmyX3PY7cIqGN8EoUQNej2GD3BpDUkvWnb7qGEdN-pd3NQRIKzWVsknXdzoB1XsoXA2Jktw7Ssyames-2CpuWiOfA5hDYXUUnr8Etx16OPYZlDwqDh">
+
+            </div>
+            <!-- Gallery Thumbnails -->
+            <div class="grid grid-cols-4 gap-3">
+              <!-- Thumb 1 -->
+              <button
+                class="thumb-btn relative aspect-square rounded-lg bg-stone-50 border border-stone-200 overflow-hidden p-2 opacity-75 hover:opacity-100 transition-all"
+                onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuCOSsqilLkCswKZdKagjUJSgTJR4IKLoR1ZNDklIFTFQKesxrVi0SFRKNx1uOJnCdo3o4cQEg2KWvGHo1SaCjpcXSnSueqy2Y6hW8MtlsU1ChkB_ifywpwG2gvQNbU3aInCeSdmyX3PY7cIqGN8EoUQNej2GD3BpDUkvWnb7qGEdN-pd3NQRIKzWVsknXdzoB1XsoXA2Jktw7Ssyames-2CpuWiOfA5hDYXUUnr8Etx16OPYZlDwqDh', this)"
+                type="button">
+                <img alt="Détail macro du cuir, surpiqûres rouges et fermeture NIZAL"
+                  class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSsqilLkCswKZdKagjUJSgTJR4IKLoR1ZNDklIFTFQKesxrVi0SFRKNx1uOJnCdo3o4cQEg2KWvGHo1SaCjpcXSnSueqy2Y6hW8MtlsU1ChkB_ifywpwG2gvQNbU3aInCeSdmyX3PY7cIqGN8EoUQNej2GD3BpDUkvWnb7qGEdN-pd3NQRIKzWVsknXdzoB1XsoXA2Jktw7Ssyames-2CpuWiOfA5hDYXUUnr8Etx16OPYZlDwqDh">
+                <span
+                  class="absolute bottom-1 right-1 text-[9px] font-bold text-stone-500 bg-white/80 px-1 rounded">1/4</span>
+              </button>
+              <!-- Thumb 2 -->
+              <button
+                class="thumb-btn relative aspect-square rounded-lg bg-stone-50 border border-stone-200 overflow-hidden p-2 opacity-75 hover:opacity-100 transition-all"
+                onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuD69ndjbMk5r_UqCld5IGSVrAsA2f4zbi0yYyrhc5B5KZFd9DzIo_96ugXVjePJV7_3xzirmwwxmB-hTsZHISJxlfQdb1CsbbN61vg6IrdB5XMunccNTZ64bYTLs8K9QgdTfdFtXugpbQSqggYERHTr89SeCWgUq67kIRuWBASK4Xg2AD4kiIsSiOVwraSySBgccCmFPgsvqvDZhqScXgVlbyXzYz_FU-Stymtn2tTwvRhOwTn8H-7R', this)"
+                type="button">
+                <img alt="Vue de profil ergonomique et paume respirante" class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD69ndjbMk5r_UqCld5IGSVrAsA2f4zbi0yYyrhc5B5KZFd9DzIo_96ugXVjePJV7_3xzirmwwxmB-hTsZHISJxlfQdb1CsbbN61vg6IrdB5XMunccNTZ64bYTLs8K9QgdTfdFtXugpbQSqggYERHTr89SeCWgUq67kIRuWBASK4Xg2AD4kiIsSiOVwraSySBgccCmFPgsvqvDZhqScXgVlbyXzYz_FU-Stymtn2tTwvRhOwTn8H-7R">
+                <span
+                  class="absolute bottom-1 right-1 text-[9px] font-bold text-stone-500 bg-white/80 px-1 rounded">2/4</span>
+              </button>
+              <!-- Thumb 3 -->
+              <button
+                class="thumb-btn relative aspect-square rounded-lg bg-stone-50 border border-stone-200 overflow-hidden p-2 opacity-75 hover:opacity-100 transition-all"
+                onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuCOSsqilLkCswKZdKagjUJSgTJR4IKLoR1ZNDklIFTFQKesxrVi0SFRKNx1uOJnCdo3o4cQEg2KWvGHo1SaCjpcXSnSueqy2Y6hW8MtlsU1ChkB_ifywpwG2gvQNbU3aInCeSdmyX3PY7cIqGN8EoUQNej2GD3BpDUkvWnb7qGEdN-pd3NQRIKzWVsknXdzoB1XsoXA2Jktw7Ssyames-2CpuWiOfA5hDYXUUnr8Etx16OPYZlDwqDh', this)"
+                type="button">
+                <img alt="Détail macro du cuir, surpiqûres rouges et fermeture NIZAL"
+                  class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOSsqilLkCswKZdKagjUJSgTJR4IKLoR1ZNDklIFTFQKesxrVi0SFRKNx1uOJnCdo3o4cQEg2KWvGHo1SaCjpcXSnSueqy2Y6hW8MtlsU1ChkB_ifywpwG2gvQNbU3aInCeSdmyX3PY7cIqGN8EoUQNej2GD3BpDUkvWnb7qGEdN-pd3NQRIKzWVsknXdzoB1XsoXA2Jktw7Ssyames-2CpuWiOfA5hDYXUUnr8Etx16OPYZlDwqDh">
+                <span
+                  class="absolute bottom-1 right-1 text-[9px] font-bold text-stone-500 bg-white/80 px-1 rounded">3/4</span>
+              </button>
+              <!-- Thumb 4 -->
+              <button
+                class="thumb-btn relative aspect-square rounded-lg bg-stone-50 border border-stone-200 overflow-hidden p-2 opacity-75 hover:opacity-100 transition-all"
+                onclick="changeImage('https://lh3.googleusercontent.com/aida-public/AB6AXuD69ndjbMk5r_UqCld5IGSVrAsA2f4zbi0yYyrhc5B5KZFd9DzIo_96ugXVjePJV7_3xzirmwwxmB-hTsZHISJxlfQdb1CsbbN61vg6IrdB5XMunccNTZ64bYTLs8K9QgdTfdFtXugpbQSqggYERHTr89SeCWgUq67kIRuWBASK4Xg2AD4kiIsSiOVwraSySBgccCmFPgsvqvDZhqScXgVlbyXzYz_FU-Stymtn2tTwvRhOwTn8H-7R', this)"
+                type="button">
+                <img alt="Vue de profil ergonomique et paume respirante" class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD69ndjbMk5r_UqCld5IGSVrAsA2f4zbi0yYyrhc5B5KZFd9DzIo_96ugXVjePJV7_3xzirmwwxmB-hTsZHISJxlfQdb1CsbbN61vg6IrdB5XMunccNTZ64bYTLs8K9QgdTfdFtXugpbQSqggYERHTr89SeCWgUq67kIRuWBASK4Xg2AD4kiIsSiOVwraSySBgccCmFPgsvqvDZhqScXgVlbyXzYz_FU-Stymtn2tTwvRhOwTn8H-7R">
+                <span
+                  class="absolute bottom-1 right-1 text-[9px] font-bold text-stone-500 bg-white/80 px-1 rounded">4/4</span>
+              </button>
+            </div>
+            <!-- Additional Assurance Pills underneath image -->
+            <div class="mt-2 grid grid-cols-3 gap-3 text-center">
+              <div class="py-2.5 px-3 bg-stone-50 rounded border border-stone-200/70 flex flex-col items-center">
+                <span class="material-symbols-outlined text-stone-700 text-lg mb-0.5">shield</span>
+                <span class="text-[11px] font-semibold text-stone-800 uppercase">Garantie 2 ans</span>
+                <span class="text-[10px] text-stone-500">Mousse anti-affaissement</span>
+              </div>
+              <div class="py-2.5 px-3 bg-stone-50 rounded border border-stone-200/70 flex flex-col items-center">
+                <span class="material-symbols-outlined text-blue-600 text-lg mb-0.5">verified_user</span>
+                <span class="text-[11px] font-semibold text-stone-800 uppercase">WBC Homologué</span>
+                <span class="text-[10px] text-stone-500">Règlementation Pro</span>
+              </div>
+              <div class="py-2.5 px-3 bg-stone-50 rounded border border-stone-200/70 flex flex-col items-center">
+                <span class="material-symbols-outlined text-red-600 text-lg mb-0.5">local_shipping</span>
+                <span class="text-[11px] font-semibold text-stone-800 uppercase">Expédition 24h</span>
+                <span class="text-[10px] text-stone-500">Colis suivi prioritaire</span>
+              </div>
+            </div>
+          </div>
+          <!-- RIGHT: PRODUCT DETAILS & PURCHASE ACTIONS -->
+          <div class="lg:col-span-5 flex flex-col">
+            <!-- Category tag -->
+            <div class="flex items-center gap-2 mb-2">
+              <span
+                class="px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 font-label-md text-xs font-bold tracking-wider uppercase">
+                Gants de boxe · Compétition &amp; Sparring
+              </span>
+
+            </div>
+            <!-- Product Title -->
+            <h1
+              class="font-headline-lg text-3xl sm:text-4xl text-stone-900 tracking-tight uppercase leading-none font-bold">
+              NIZAL Pro Boxing Gloves
+            </h1>
+
+            <!-- Pricing Block -->
+            <div class="py-5">
+              <div class="flex items-baseline gap-3">
+                <span class="font-headline-lg text-4xl text-stone-950 font-extrabold tracking-tight">119,00 DA</span>
+                <span class="text-sm line-through text-stone-400">149,00 DA</span>
+                <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-100 text-red-700 uppercase">-20%
+                  LANCEMENT</span>
+              </div>
+
+            </div>
+            <!-- Short Description Pitch -->
+            <p class="font-body-md text-stone-600 text-sm leading-relaxed mb-6">
+              Gants d'élite forgés en cuir pleine fleur haute densité avec rembourrage multicouche <strong
+                class="text-stone-800">Shock-Absorb™</strong>. Maintien du poignet verrouillé par bande ergonomique en
+              fibre de carbone et mesh d'aération thermique pour une puissance d'impact maximale sans compromis sur la
+              sécurité articulaire.
+            </p>
+            <!-- Product Selectors Form -->
+            <form class="flex flex-col gap-6" id="productForm" onsubmit="event.preventDefault(); addToCart();">
+              <!-- Colorway Options -->
+              <div>
+                <div class="flex items-center justify-between mb-2.5">
+                  <label class="text-xs font-bold text-stone-900 uppercase tracking-wider">Coloris : <span
+                      class="text-red-600 font-normal" id="selectedColorName">Noir &amp; Rouge Signature</span></label>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button
+                    class="color-btn relative flex items-center gap-2 p-1.5 pr-3 rounded-lg border-2 border-stone-900 bg-stone-50 text-xs font-medium text-stone-900 shadow-sm"
+                    onclick="selectColor('Noir &amp; Rouge Signature', this)" type="button">
+                    <span
+                      class="w-5 h-5 rounded-full bg-gradient-to-tr from-black via-stone-900 to-red-600 border border-stone-300"></span>
+                    <span class="">Noir / Rouge</span>
+                  </button>
+                  <button
+                    class="color-btn relative flex items-center gap-2 p-1.5 pr-3 rounded-lg border border-stone-200 bg-white text-xs font-medium text-stone-600 hover:border-stone-400"
+                    onclick="selectColor('Noir Stealth Mat', this)" type="button">
+                    <span class="w-5 h-5 rounded-full bg-stone-900 border border-stone-400"></span>
+                    <span class="">Stealth Mat</span>
+                  </button>
+                  <button
+                    class="color-btn relative flex items-center gap-2 p-1.5 pr-3 rounded-lg border border-stone-200 bg-white text-xs font-medium text-stone-600 hover:border-stone-400"
+                    onclick="selectColor('Blanc &amp; Rouge Arène', this)" type="button">
+                    <span
+                      class="w-5 h-5 rounded-full bg-gradient-to-tr from-stone-100 to-red-600 border border-stone-300"></span>
+                    <span class="">Blanc / Rouge</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Sizing Selection -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <label class="text-xs font-bold text-stone-900 uppercase tracking-wider">Taille : <span
+                      class="text-stone-500 font-normal" id="selectedSize">L</span></label>
+                  <button
+                    class="text-xs font-medium text-blue-600 hover:text-blue-800 flex items-center gap-1 underline underline-offset-2"
+                    onclick="openSizeGuide()" type="button">
+                    <span class="material-symbols-outlined text-[15px]">straighten</span>
+                    Guide des tailles &amp; équivalences poids
+                  </button>
+                </div>
+                <div class="grid grid-cols-4 gap-2.5">
+                  <button
+                    class="size-btn py-2.5 text-center font-headline-sm text-sm uppercase rounded-lg border border-stone-200 hover:border-stone-400 bg-white text-stone-800 transition-colors"
+                    onclick="selectSize('S', this)" type="button">
+                    S
+                    <span class="block text-[10px] font-body-sm text-stone-400 font-normal lowercase">Combat &lt;
+                      65kg</span>
+                  </button>
+                  <button
+                    class="size-btn py-2.5 text-center font-headline-sm text-sm uppercase rounded-lg border border-stone-200 hover:border-stone-400 bg-white text-stone-800 transition-colors"
+                    onclick="selectSize('M', this)" type="button">
+                    M
+                    <span class="block text-[10px] font-body-sm text-stone-400 font-normal lowercase">Sac &amp;
+                      Leçons</span>
+                  </button>
+                  <button
+                    class="size-btn py-2.5 text-center font-headline-sm text-sm uppercase rounded-lg border-2 border-stone-900 bg-stone-900 text-white shadow-sm transition-colors"
+                    onclick="selectSize('L', this)" type="button">
+                    L
+                    <span class="block text-[10px] font-body-sm text-stone-300 font-normal lowercase">Sparring
+                      Polyvalent</span>
+                  </button>
+                  <button
+                    class="size-btn py-2.5 text-center font-headline-sm text-sm uppercase rounded-lg border border-stone-200 hover:border-stone-400 bg-white text-stone-800 transition-colors"
+                    onclick="selectSize('XL', this)" type="button">
+                    XL
+                    <span class="block text-[10px] font-body-sm text-stone-400 font-normal lowercase">Sparring
+                      Lourd</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Quantity and CTA Buttons Row -->
+              <div class="pt-2 flex flex-col gap-3">
+                <div class="flex items-stretch gap-3">
+                  <!-- Quantity selector -->
+                  <div class="flex items-center border border-stone-300 rounded-lg bg-white overflow-hidden shrink-0">
+                    <button
+                      class="w-10 h-12 flex items-center justify-center text-stone-600 hover:bg-stone-100 active:bg-stone-200 transition-colors"
+                      onclick="adjustQty(-1)" type="button">
+                      <span class="material-symbols-outlined text-[18px]">remove</span>
+                    </button>
+                    <input class="w-10 text-center font-bold text-stone-900 text-sm focus:outline-none select-none"
+                      id="qtyInput" readonly="" type="text" value="1">
+                    <button
+                      class="w-10 h-12 flex items-center justify-center text-stone-600 hover:bg-stone-100 active:bg-stone-200 transition-colors"
+                      onclick="adjustQty(1)" type="button">
+                      <span class="material-symbols-outlined text-[18px]">add</span>
+                    </button>
+                  </div>
+                  <!-- Main Red Add to Cart Button -->
+                  <button
+                    class="flex-1 bg-[#E10600] hover:bg-[#c00500] active:scale-[0.99] text-white font-headline-sm text-base uppercase tracking-wider font-bold rounded-lg px-6 flex items-center justify-center gap-2.5 shadow-[0_4px_14px_rgba(225,6,0,0.35)] transition-all"
+                    type="submit">
+                    <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                    Ajouter au panier
+                  </button>
+
+                </div>
+
+              </div>
+            </form>
+            <!-- Service Assurance Highlights -->
+            <div class="mt-6 pt-6 border-t border-stone-200 flex flex-col gap-2.5">
+              <div class="flex items-center gap-3 text-xs text-stone-700">
+                <span class="material-symbols-outlined text-emerald-600 text-[20px] shrink-0">local_shipping</span>
+                <span class=""><strong class="font-semibold text-stone-900">Livraison gratuite</strong> dès 100 DA en
+                  24/48h avec suivi par SMS.</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-stone-700">
+                <span class="material-symbols-outlined text-blue-600 text-[20px] shrink-0">published_with_changes</span>
+                <span class=""><strong class="font-semibold text-stone-900">Retours &amp; échanges gratuits</strong>
+                  sous 30 jours (étiquette fournie).</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-stone-700">
+                <span class="material-symbols-outlined text-red-600 text-[20px] shrink-0">sports_martial_arts</span>
+                <span class=""><strong class="font-semibold text-stone-900">Développé avec nos champions</strong> dans
+                  nos centres d'entraînement partenaires.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Vanilla JavaScript Logic for Tab switching, Gallery swap, Color/Size selection, and Counter -->
+      <script>
+        // Gallery Switcher
+        function changeImage(newSrc, element) {
+          const mainImg = document.getElementById('mainProductImage');
+          mainImg.style.opacity = '0.3';
+          mainImg.src = newSrc;
+          setTimeout(() => {
+            mainImg.style.opacity = '1';
+          }, 150);
+
+          document.querySelectorAll('.thumb-btn').forEach(btn => {
+            btn.classList.remove('border-red-600', 'ring-2', 'ring-red-600/20', 'border-2');
+            btn.classList.add('border-stone-200', 'border', 'opacity-75');
+          });
+          element.classList.remove('border-stone-200', 'opacity-75');
+          element.classList.add('border-red-600', 'border-2', 'ring-2', 'ring-red-600/20', 'opacity-100');
+        }
+
+        // Color Selector
+        function selectColor(colorName, btn) {
+          document.getElementById('selectedColorName').textContent = colorName;
+          document.querySelectorAll('.color-btn').forEach(b => {
+            b.classList.remove('border-stone-900', 'border-2', 'bg-stone-50', 'text-stone-900', 'shadow-sm');
+            b.classList.add('border-stone-200', 'border', 'bg-white', 'text-stone-600');
+          });
+          btn.classList.remove('border-stone-200', 'border', 'bg-white', 'text-stone-600');
+          btn.classList.add('border-stone-900', 'border-2', 'bg-stone-50', 'text-stone-900', 'shadow-sm');
+        }
+
+        // Size Selector
+        function selectSize(sizeValue, btn) {
+          document.getElementById('selectedSize').textContent = sizeValue;
+          document.querySelectorAll('.size-btn').forEach(b => {
+            b.classList.remove('border-stone-900', 'border-2', 'bg-stone-900', 'text-white', 'shadow-sm');
+            b.classList.add('border-stone-200', 'border', 'bg-white', 'text-stone-800');
+            const subtext = b.querySelector('span');
+            if (subtext) subtext.className = 'block text-[10px] font-body-sm text-stone-400 font-normal lowercase';
+          });
+          btn.classList.remove('border-stone-200', 'border', 'bg-white', 'text-stone-800');
+          btn.classList.add('border-stone-900', 'border-2', 'bg-stone-900', 'text-white', 'shadow-sm');
+          const activeSubtext = btn.querySelector('span');
+          if (activeSubtext) activeSubtext.className = 'block text-[10px] font-body-sm text-stone-300 font-normal lowercase';
+        }
+
+        // Quantity Increment/Decrement
+        function adjustQty(amount) {
+          const input = document.getElementById('qtyInput');
+          let currentVal = parseInt(input.value) || 1;
+          currentVal += amount;
+          if (currentVal < 1) currentVal = 1;
+          if (currentVal > 10) currentVal = 10;
+          input.value = currentVal;
+        }
+
+        // Tabs Manager
+        function switchTab(tabId, clickedBtn) {
+          document.querySelectorAll('.tab-panel').forEach(panel => {
+            panel.classList.add('hidden');
+          });
+          document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('border-red-600', 'text-stone-950', 'font-bold');
+            btn.classList.add('border-transparent', 'text-stone-500');
+          });
+
+          const activePanel = document.getElementById('tab-' + tabId);
+          if (activePanel) {
+            activePanel.classList.remove('hidden');
+          }
+          clickedBtn.classList.remove('border-transparent', 'text-stone-500');
+          clickedBtn.classList.add('border-red-600', 'text-stone-950', 'font-bold');
+        }
+
+        function openSizeGuide() {
+          const guideBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.textContent.includes('Guide des Tailles'));
+          if (guideBtn) {
+            switchTab('size-guide', guideBtn);
+            guideBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+
+        // Wishlist Toggle
+        function toggleWishlist(btn) {
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon.textContent === 'favorite_border') {
+            icon.textContent = 'favorite';
+            icon.style.fontVariationSettings = "'FILL' 1";
+            btn.classList.add('text-red-600', 'border-red-300');
+          } else {
+            icon.textContent = 'favorite_border';
+            icon.style.fontVariationSettings = "'FILL' 0";
+            btn.classList.remove('text-red-600', 'border-red-300');
+          }
+        }
+
+        // Cart Notification Toast
+        let toastTimeout;
+        function addToCart() {
+          const size = document.getElementById('selectedSize').textContent;
+          const color = document.getElementById('selectedColorName').textContent;
+          const qty = document.getElementById('qtyInput').value;
+
+          const toast = document.getElementById('cartToast');
+          const toastMsg = document.getElementById('toastMessage');
+          toastMsg.textContent = `${qty}x NIZAL Pro Boxing Gloves (${size} - ${color})`;
+
+          toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+          toast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            hideToast();
+          }, 4000);
+        }
+
+        function hideToast() {
+          const toast = document.getElementById('cartToast');
+          toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }
+
+        function buyNow() {
+          addToCart();
+          setTimeout(() => {
+            window.location.href = "#panier";
+          }, 400);
+        }
+      </script>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low  shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+    <div class="max-w-7xl mx-auto px-gutter py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm"><span
+              class="font-headline-md text-headline-md uppercase tracking-wider text-on-surface">NIZAL</span><span
+              class="w-2 h-2 rounded-full bg-primary-container"></span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Le monde des sports de combat, réuni au
+            même endroit. Tournois, classements et billetterie officielle.</p>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Navigation</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="actualites" href="shop.html">Actualités</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="athletes" href="shop.html">Athlètes</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="evenements" href="shop.html">Événements</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="boutique" href="shop.html">Boutique</a></nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Informations</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="a-propos" href="shop.html">À propos</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="contact" href="shop.html">Contact</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="faq" href="shop.html">FAQ</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="conditions-generales" href="shop.html">Conditions générales</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="politique-de-confidentialite" href="shop.html">Politique de confidentialité</a></nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Suivez-nous</span>
+          <div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><a
+              class="hover:text-on-surface transition-colors" href="shop.html">Instagram</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">Facebook</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">YouTube</a><a
+              class="hover:text-on-surface transition-colors" href="shop.html">TikTok</a></div>
+        </div>
+      </div>
+      <div
+        class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+        <p class="">© 2026 NIZAL. Tous droits réservés.</p>
+        <p class="uppercase tracking-wider font-label-sm text-label-sm text-on-surface-variant">Plateforme Combat Sports
+          Haute Performance</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./nav.js"></script>
+
+
+</body>
+
+</html>

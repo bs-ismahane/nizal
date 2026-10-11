@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../nav.css">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {"colors": {"secondary-fixed-dim": "#b6c4ff", "on-primary-fixed": "#410100", "on-surface": "#e5e1e6", "on-secondary-fixed-variant": "#003ab2", "on-tertiary-fixed": "#1a1c1c", "on-error-container": "#ffdad6", "surface-container-highest": "#353438", "primary-fixed": "#ffdad4", "on-background": "#e5e1e6", "on-surface-variant": "#e9bcb5", "surface-container-low": "#1b1b1e", "on-error": "#690005", "inverse-primary": "#c00500", "error-container": "#93000a", "primary": "#ffb4a8", "on-tertiary-fixed-variant": "#454747", "on-secondary-container": "#e4e7ff", "on-secondary-fixed": "#001550", "secondary-fixed": "#dce1ff", "on-secondary": "#00277f", "surface-tint": "#ffb4a8", "surface-container": "#201f22", "surface-dim": "#131316", "outline": "#af8781", "on-primary-fixed-variant": "#930300", "on-tertiary-container": "#f5f5f5", "inverse-surface": "#e5e1e6", "primary-container": "#e10600", "surface": "#131316", "inverse-on-surface": "#303033", "background": "#131316", "on-primary": "#680200", "error": "#ffb4ab", "secondary": "#b6c4ff", "surface-bright": "#39393c", "secondary-container": "#0056fd", "tertiary-container": "#6f7070", "on-tertiary": "#2f3131", "outline-variant": "#5e3f3a", "primary-fixed-dim": "#ffb4a8", "tertiary-fixed": "#e2e2e2", "surface-variant": "#353438", "tertiary-fixed-dim": "#c6c6c7", "surface-container-lowest": "#0e0e11", "tertiary": "#c6c6c7", "on-primary-container": "#fff2f0", "surface-container-high": "#2a2a2d"}, "borderRadius": {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, "spacing": {"space-md": "1rem", "space-lg": "1.5rem", "margin": "2rem", "gutter-sm": "1rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-sm": "1rem"}, "fontFamily": {"headline-lg": ["Oswald"], "label-lg": ["Inter"], "data-metric": ["Oswald"], "headline-sm": ["Oswald"], "display-lg-mobile": ["Oswald"], "body-sm": ["Inter"], "headline-md": ["Oswald"], "body-lg": ["Inter"], "label-md": ["Inter"], "display-xl-mobile": ["Oswald"], "title-md": ["Inter"], "display-lg": ["Oswald"], "display-xl": ["Oswald"], "body-md": ["Inter"]}, "fontSize": {"headline-lg": ["32px", {"lineHeight": "38px", "letterSpacing": "0.02em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700"}], "data-metric": ["28px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "600"}], "display-lg-mobile": ["32px", {"lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "700"}], "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "30px", "letterSpacing": "0.02em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "label-md": ["11px", {"lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700"}], "display-xl-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "0.03em", "fontWeight": "700"}], "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "display-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.03em", "fontWeight": "700"}], "display-xl": ["64px", {"lineHeight": "68px", "letterSpacing": "0.04em", "fontWeight": "700"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]}}}};</script>
+</head>
+
+<body class="bg-white text-on-tertiary-fixed font-body-md text-body-md antialiased min-h-screen flex flex-col">
+  <header class="" id="header">
+
+    <!-- LOGO -->
+    <a href="../index.html" class="logo-link">
+      <img src="../assest/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+      <ul>
+        <li>
+          <a href="../index.html">HOME</a>
+        </li>
+
+        <li>
+          <a href="../articles/actualites.html">ACTUALIT?S</a>
+        </li>
+
+        <li>
+          <a href="events.html" class="active">?V?NEMENTS</a>
+        </li>
+
+        <li>
+          <a href="../boutique/shop.html">BOUTIQUE</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+
+      <a href="../search.html" aria-label="Search">
+        <i class="fas fa-search"></i>
+      </a>
+
+      <a href="../boutique/cart.html" aria-label="Cart">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+  <main class="w-full bg-white flex-1">
+    <div
+      class="flex flex-col w-full bg-white text-neutral-900 antialiased selection:bg-primary-container selection:text-white">
+      <!-- FIL D'ARIANE ET NAVIGATION CONTEXTUELLE -->
+      <section class="w-full bg-neutral-50/70 border-b border-neutral-200/80">
+        <div
+          class="max-w-[1440px] mx-auto px-margin-sm md:px-margin py-3.5 flex flex-wrap items-center justify-between gap-4">
+          <nav aria-label="Fil d'ariane"
+            class="flex items-center gap-2 text-neutral-500 font-label-md text-label-md uppercase tracking-wider">
+            <a class="hover:text-secondary-container transition-colors" data-path="accueil"
+              href="../boutique/shop.html">Accueil</a>
+            <span class="text-neutral-300">/</span>
+            <a class="hover:text-secondary-container transition-colors" data-path="competitions"
+              href="../boutique/shop.html">Compétitions</a>
+            <span class="text-neutral-300">/</span>
+            <span class="text-neutral-900 font-semibold text-secondary-container">NIZAL Fight Night 01</span>
+          </nav>
+
+        </div>
+      </section>
+      <!-- HERO SECTION : SPLIT CARD MODERN BRUTALIST SUR FOND BLANC -->
+      <section class="w-full bg-white py-8 md:py-12 border-b border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <!-- Colonne Gauche : Éléments Clés & Call to Action -->
+            <div class="lg:col-span-6 flex flex-col space-y-6">
+
+              <!-- Titre Principal & Accroche -->
+              <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                  <span class="w-2 h-10 bg-primary-container inline-block -skew-x-12"></span>
+                  <h1 class="font-display-xl text-display-xl tracking-tight text-neutral-900 uppercase leading-none">
+                    FIGHT NIGHT 01
+                  </h1>
+                </div>
+                <p class="font-headline-sm text-headline-sm text-neutral-600 uppercase font-medium tracking-wide">
+                  Le tournoi d'élite mondial de MMA en Afrique du Nord
+                </p>
+                <p class="font-body-md text-body-md text-neutral-600 max-w-xl">
+                  Une arène olympique, 16 combattants internationaux confirmés, arbitrage fédéral WMMAC et transmission
+                  mondiale en télémétrie ultra-haute vitesse.
+                </p>
+              </div>
+              <!-- Méta-blocs d'urgence & repères temporels -->
+              <div
+                class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-neutral-50 rounded-xl border border-neutral-200/80">
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-neutral-500 uppercase">Date &amp; Heure</span>
+                  <span class="font-headline-sm text-headline-sm text-neutral-900 font-bold uppercase">14 Juin
+                    2026</span>
+                  <span class="font-body-sm text-body-sm text-neutral-600">19:30 UTC+1 (Coup d'envoi)</span>
+                </div>
+                <div class="flex flex-col border-t sm:border-t-0 sm:border-l border-neutral-200 pt-2 sm:pt-0 sm:pl-4">
+                  <span class="font-label-md text-label-md text-neutral-500 uppercase">Lieu Arène</span>
+                  <span class="font-headline-sm text-headline-sm text-neutral-900 font-bold uppercase">Coupole
+                    Alger</span>
+                  <span class="font-body-sm text-body-sm text-neutral-600">Complexe Mohamed Boudiaf</span>
+                </div>
+
+              </div>
+              <!-- Actions Primaires (Redirection stricte vers inscription séparée) -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                <a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-container hover:bg-[#ff1e19] text-white font-label-lg text-label-lg uppercase tracking-wider rounded shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                  data-path="inscription-competition" href="./nizal-inscription-informations(1).html">
+                  <span class="">S'inscrire maintenant</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+
+              </div>
+              <div class="flex items-center gap-3 pt-1">
+                <span class="material-symbols-outlined text-neutral-400 text-[18px]">verified_user</span>
+                <p class="font-body-sm text-body-sm text-neutral-500">
+                  Contrôle strict des licences Pro MMA. Tirage sous huissier assermenté.
+                </p>
+              </div>
+            </div>
+            <!-- Colonne Droite : Affiche / Visuel Cinématique Arène -->
+            <div class="lg:col-span-6 relative">
+              <div
+                class="relative w-full h-[460px] md:h-[540px] rounded-2xl overflow-hidden shadow-xl border border-neutral-200 group">
+                <img alt="Combat d'élite MMA NIZAL dans l'octogone officiel"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  src="../assest/actuiles3.png">
+                <!-- Gradient subtil d'immersion pour lisibilité des étiquettes flottantes -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <!-- Badge Live Status Flottant -->
+                <div
+                  class="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded shadow-sm border border-neutral-200/80 flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 bg-primary-container rounded-full animate-ping"></span>
+                  <span class="font-headline-sm text-headline-sm font-bold text-neutral-900 tracking-wider">OFFICIAL
+                    BOUT</span>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FICHE SIGNALÉTIQUE : 6 BLOCS SCAN RAPIDE -->
+      <section class="w-full bg-neutral-50 py-12 border-b border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+            <div>
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-secondary-container font-bold">Spécifications
+                officielles</span>
+              <h2 class="font-headline-lg text-headline-lg uppercase text-neutral-900 tracking-tight mt-1">
+                Fiche Signalétique de la Compétition
+              </h2>
+            </div>
+            <span class="font-body-sm text-body-sm text-neutral-500 mt-2 md:mt-0">
+              Dossier certifié par la direction technique NIZAL Combat Sports
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Bloc 1 : Date & Horaires -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div
+                class="w-12 h-12 rounded-lg bg-blue-50 text-secondary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">calendar_month</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Date &amp;
+                Horaires</h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">14 Juin 2026 à 19h30 UTC+1</p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Pesée officielle des athlètes le vendredi 13 Juin dès 10h30. Émargement médical obligatoire le matin du
+                combat à 08h30.
+              </p>
+            </div>
+            <!-- Bloc 2 : Lieu & Infrastructure -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div
+                class="w-12 h-12 rounded-lg bg-blue-50 text-secondary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">stadium</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Lieu &amp;
+                Infrastructure</h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">Coupole Olympique Mohamed Boudiaf
+              </p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Capacité de 15 000 spectateurs assis. Octogone de compétition de 9 mètres aux normes internationales de
+                cage WMMAC.
+              </p>
+            </div>
+            <!-- Bloc 3 : Sport & Discipline -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div
+                class="w-12 h-12 rounded-lg bg-blue-50 text-secondary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">sports_mma</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Sport &amp;
+                Discipline</h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">MMA Professionnel (Règles Unifiées)
+              </p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Frappes au sol autorisées selon standard international. 3 juges neutres habilités et système de notation
+                10-Point Must.
+              </p>
+            </div>
+            <!-- Bloc 4 : Catégories ouvertes -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div
+                class="w-12 h-12 rounded-lg bg-blue-50 text-secondary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">scale</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Divisions de Poids
+              </h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">3 Divisions Officielles Masculines
+              </p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Welterweight (-77.1 kg), Middleweight (-83.9 kg) et Heavyweight (+93.0 kg). Tolérance maximale de pesée
+                : 0.450 kg (hors titre).
+              </p>
+            </div>
+            <!-- Bloc 5 : Frais d'inscription -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-lg bg-red-50 text-primary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">payments</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Frais
+                d'Inscription</h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">8 500 DZD (~55 €) par combattant
+              </p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Inclus : pack de gants NIZAL neufs homologués, assurance responsabilité sportive de combat et
+                hébergement officiel des finalistes.
+              </p>
+            </div>
+            <!-- Bloc 6 : Date limite & Quotas -->
+            <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 rounded-lg bg-red-50 text-primary-container flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-[26px]">timer</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 mb-2 font-bold">Date Limite
+                Stricte</h3>
+              <p class="font-body-md text-body-md text-neutral-700 mb-2 font-medium">31 Mai 2026 à 23h59 UTC+1</p>
+              <p class="font-body-sm text-body-sm text-neutral-500 leading-relaxed">
+                Clôture immédiate dès que les tableaux de 8 sont validés. Aucun repêchage ou inscription sur place le
+                jour de l'événement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- À PROPOS & DISPOSITIF MÉDICAL -->
+      <section class="w-full bg-white py-14 border-b border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Éditorial Vision NIZAL -->
+            <div class="lg:col-span-7 space-y-5">
+              <div
+                class="inline-flex items-center gap-2 text-secondary-container font-label-md text-label-md uppercase font-bold tracking-wider">
+                <span class="w-1.5 h-4 bg-secondary-container"></span>
+                Standards Internationaux
+              </div>
+              <h2 class="font-display-lg text-display-lg text-neutral-900 uppercase tracking-tight">
+                L'Élite du Combat Sportif Réunie à Alger
+              </h2>
+              <p class="font-body-lg text-body-lg text-neutral-700 leading-relaxed">
+                NIZAL Fight Night 01 marque une étape historique pour le sport de combat en Afrique du Nord. Conçu pour
+                offrir aux athlètes émergents et confirmés une vitrine médiatique d'envergure mondiale, l'événement
+                garantit des bourses claires, une impartialité arbitrale irréprochable et une télémétrie sportive de
+                haute précision.
+              </p>
+              <p class="font-body-md text-body-md text-neutral-600 leading-relaxed">
+                Chaque combat est encadré par des officiels certifiés WMMAC. L'organisation met un point d'honneur à
+                offrir aux combattants un environnement d'expression technique maximal avec vestiaires climatisés, zones
+                d'échauffement équipées de cages modulaires, et accompagnement continu des coins techniques.
+              </p>
+              <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-neutral-200">
+                <div>
+                  <p class="font-data-metric text-data-metric text-neutral-900 font-bold">100%</p>
+                  <p class="font-body-sm text-body-sm text-neutral-500">Arbitres Fédéraux Homologués</p>
+                </div>
+                <div>
+                  <p class="font-data-metric text-data-metric text-primary-container font-bold">25 000 DA</p>
+                  <p class="font-body-sm text-body-sm text-neutral-500">Prize Pool &amp; Bonus de Soirée</p>
+                </div>
+                <div>
+                  <p class="font-data-metric text-data-metric text-secondary-container font-bold">4K UHD</p>
+                  <p class="font-body-sm text-body-sm text-neutral-500">Retransmission Globale</p>
+                </div>
+              </div>
+            </div>
+            <!-- Bloc Protocoles Médicaux & Sécurité -->
+            <div class="lg:col-span-5 bg-neutral-50 p-6 md:p-8 rounded-2xl border border-neutral-200/80 shadow-sm">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-full bg-red-100 text-primary-container flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">local_hospital</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 font-bold">Protocole Médical
+                    Strict</h3>
+                  <p class="font-body-sm text-body-sm text-neutral-500">La santé de l'athlète est non négociable</p>
+                </div>
+              </div>
+              <div class="space-y-4 pt-2">
+                <div class="flex items-start gap-3">
+                  <span
+                    class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">health_and_safety</span>
+                  <p class="font-body-sm text-body-sm text-neutral-700 leading-normal">
+                    <strong>Équipe médicale permanente :</strong> Présence de 4 médecins urgentistes et traumatologues
+                    au bord de l'octogone durant l'intégralité des duels.
+                  </p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">upload_file</span>
+                  <p class="font-body-sm text-body-sm text-neutral-700 leading-normal">
+                    <strong>Examens préalables :</strong> Fond d'œil récent, électrocardiogramme de repos et sérologies
+                    complètes obligatoires au retrait du badge.
+                  </p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">ambulance</span>
+                  <p class="font-body-sm text-body-sm text-neutral-700 leading-normal">
+                    <strong>Unité mobile de réanimation :</strong> Deux ambulances médicalisées dédiées en stationnement
+                    permanent avec accès prioritaire CHU Mustapha Pacha.
+                  </p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">verified</span>
+                  <p class="font-body-sm text-body-sm text-neutral-700 leading-normal">
+                    <strong>Suspensions post-combat :</strong> Application immédiate des suspensions médicales
+                    automatisées en cas de KO ou TKO selon la charte WMMAC.
+                  </p>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-neutral-200 flex items-center justify-between">
+                <span class="text-xs text-neutral-500 uppercase tracking-wider font-semibold">Médecin Chef de
+                  Tournoi</span>
+                <span class="text-xs font-bold text-neutral-800">Dr. S. Benali (WMMAC Medical Board)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CATÉGORIES & DIVISIONS DISPONIBLES -->
+      <section class="w-full bg-neutral-50/50 py-14 border-b border-neutral-200" id="divisions">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+            <div>
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-secondary-container font-bold">Grille
+                des combats</span>
+              <h2 class="font-display-lg text-display-lg uppercase text-neutral-900 tracking-tight mt-1">
+                Catégories &amp; Divisions Disponibles
+              </h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-neutral-600 max-w-md mt-2 md:mt-0">
+              Sélectionnez la catégorie correspondant à votre fiche d'engagement. Tout changement de catégorie
+              post-inscription requiert l'accord du comité technique.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- CARTE DIVISION 1 : WELTERWEIGHT -->
+            <div
+              class="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="p-6 md:p-8 space-y-6">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="px-3 py-1 bg-blue-50 text-secondary-container font-label-md text-label-md uppercase rounded tracking-wider font-bold">
+                    Division Pro · 77.1 KG
+                  </span>
+
+                </div>
+                <div>
+                  <h3 class="font-headline-lg text-headline-lg uppercase text-neutral-900 font-bold">Welterweight</h3>
+                  <p class="font-headline-sm text-headline-sm text-neutral-500 font-medium">Limite : 77.1 kg (170 lbs)
+                  </p>
+                </div>
+                <!-- Fiche technique division -->
+                <ul
+                  class="space-y-3 font-body-sm text-body-sm text-neutral-600 border-t border-b border-neutral-100 py-4">
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Genre &amp; Âge :</span>
+                    <span class="font-semibold text-neutral-800">Hommes · 18 à 35 ans</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Niveau d'expérience :</span>
+                    <span class="font-semibold text-neutral-800">Confirmé / Pro (Min 3 combats)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format des rounds :</span>
+                    <span class="font-semibold text-neutral-800">3 × 5 min (Finale 5 × 5 min)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format tableau :</span>
+                    <span class="font-semibold text-neutral-800">Élimination directe (8 fighters)</span>
+                  </li>
+                </ul>
+                <!-- Barre de jauge places -->
+
+              </div>
+
+            </div>
+            <!-- CARTE DIVISION 2 : MIDDLEWEIGHT -->
+            <div
+              class="bg-white rounded-2xl border-2 border-secondary-container overflow-hidden shadow-md hover:shadow-xl transition-all flex flex-col justify-between relative">
+              <div
+                class="absolute top-0 right-0 bg-secondary-container text-white font-label-md text-label-md uppercase px-3 py-1 font-bold rounded-bl">
+                Recommandé
+              </div>
+              <div class="p-6 md:p-8 space-y-6">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="px-3 py-1 bg-blue-50 text-secondary-container font-label-md text-label-md uppercase rounded tracking-wider font-bold">
+                    Division Pro · 83.9 KG
+                  </span>
+
+                </div>
+                <div>
+                  <h3 class="font-headline-lg text-headline-lg uppercase text-neutral-900 font-bold">Middleweight</h3>
+                  <p class="font-headline-sm text-headline-sm text-neutral-500 font-medium">Limite : 83.9 kg (185 lbs)
+                  </p>
+                </div>
+                <!-- Fiche technique division -->
+                <ul
+                  class="space-y-3 font-body-sm text-body-sm text-neutral-600 border-t border-b border-neutral-100 py-4">
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Genre &amp; Âge :</span>
+                    <span class="font-semibold text-neutral-800">Hommes · 18 à 35 ans</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Niveau d'expérience :</span>
+                    <span class="font-semibold text-neutral-800">Confirmé / Pro (Min 4 combats)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format des rounds :</span>
+                    <span class="font-semibold text-neutral-800">3 × 5 min (Finale 5 × 5 min)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format tableau :</span>
+                    <span class="font-semibold text-neutral-800">Élimination directe (8 fighters)</span>
+                  </li>
+                </ul>
+                <!-- Barre de jauge places -->
+
+              </div>
+
+            </div>
+            <!-- CARTE DIVISION 3 : HEAVYWEIGHT (URGENCE / ROUGE) -->
+            <div
+              class="bg-white rounded-2xl border border-neutral-200 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="p-6 md:p-8 space-y-6">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="px-3 py-1 bg-red-50 text-primary-container font-label-md text-label-md uppercase rounded tracking-wider font-bold">
+                    Division Pro · +93.0 KG
+                  </span>
+
+                </div>
+                <div>
+                  <h3 class="font-headline-lg text-headline-lg uppercase text-neutral-900 font-bold">Heavyweight</h3>
+                  <p class="font-headline-sm text-headline-sm text-neutral-500 font-medium">Limite : +93.0 kg / Max
+                    120.2 kg</p>
+                </div>
+                <!-- Fiche technique division -->
+                <ul
+                  class="space-y-3 font-body-sm text-body-sm text-neutral-600 border-t border-b border-neutral-100 py-4">
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Genre &amp; Âge :</span>
+                    <span class="font-semibold text-neutral-800">Hommes · 20 à 36 ans</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Niveau d'expérience :</span>
+                    <span class="font-semibold text-neutral-800">Pro Vérifié (Bilan positif requis)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format des rounds :</span>
+                    <span class="font-semibold text-neutral-800">3 × 5 min (Ceinture 5 × 5 min)</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="text-neutral-500">Format tableau :</span>
+                    <span class="font-semibold text-neutral-800">Final Four (4 fighters d'élite)</span>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RÈGLES & CONDITIONS (ACCORDÉONS INTERACTIFS ÉPURÉS) -->
+      <section class="w-full bg-neutral-50 py-14 border-b border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class=" mb-10">
+            <span class="font-label-md text-label-md uppercase tracking-wider text-secondary-container font-bold">Cadre
+              réglementaire &amp; Éligibilité</span>
+            <h2 class="font-headline-lg text-headline-lg uppercase text-neutral-900 tracking-tight mt-1">
+              Règles &amp; Conditions Générales
+            </h2>
+            <p class="font-body-md text-body-md text-neutral-600 mt-2">
+              Tout participant inscrit accepte sans réserve le présent protocole de sécurité et d'arbitrage fédéral
+              NIZAL / WMMAC.
+            </p>
+          </div>
+          <!-- Accordéons avec Javascript natif interactif -->
+          <div class="space-y-4 " id="rulesAccordion">
+            <!-- Item 1 : Règlement officiel -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm">
+              <button
+                class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                onclick="toggleAccordion('rule-1')" type="button">
+                <div class="flex items-center gap-4">
+                  <span
+                    class="w-8 h-8 rounded bg-blue-50 text-secondary-container font-headline-sm flex items-center justify-center font-bold">01</span>
+                  <span
+                    class="font-headline-sm text-headline-sm text-neutral-900 uppercase font-bold group-hover:text-secondary-container transition-colors">
+                    Règlement Officiel &amp; Système de Notation
+                  </span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-neutral-400 group-hover:text-secondary-container transition-transform duration-300 rotate-180"
+                  id="icon-rule-1">expand_less</span>
+              </button>
+              <div class="px-6 pb-6 pt-1 text-neutral-600 font-body-md border-t border-neutral-100" id="content-rule-1">
+                <p class="leading-relaxed mb-3">
+                  Tous les combats sont jugés selon les <strong>Règles Unifiées des Arts Martiaux Mixtes</strong>. Le
+                  système de notation 10-Point Must est rigoureusement appliqué : le vainqueur du round reçoit
+                  obligatoirement 10 points, le perdant 9 ou moins (selon l'impact, le contrôle et l'agressivité
+                  efficace).
+                </p>
+                <p class="leading-relaxed text-body-sm text-neutral-500">
+                  Sont strictement proscrits : les coups de tête, coups aux parties génitales, morsures, doigts dans les
+                  yeux, coups portés derrière la tête ou le long de la colonne vertébrale, et les projections délibérées
+                  hors de la surface de combat.
+                </p>
+              </div>
+            </div>
+            <!-- Item 2 : Éligibilité & Antidopage -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm">
+              <button
+                class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                onclick="toggleAccordion('rule-2')" type="button">
+                <div class="flex items-center gap-4">
+                  <span
+                    class="w-8 h-8 rounded bg-blue-50 text-secondary-container font-headline-sm flex items-center justify-center font-bold">02</span>
+                  <span
+                    class="font-headline-sm text-headline-sm text-neutral-900 uppercase font-bold group-hover:text-secondary-container transition-colors">
+                    Conditions de Participation &amp; Éligibilité Sportive
+                  </span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-neutral-400 group-hover:text-secondary-container transition-transform duration-300"
+                  id="icon-rule-2">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 pt-1 text-neutral-600 font-body-md border-t border-neutral-100 hidden"
+                id="content-rule-2">
+                <p class="leading-relaxed mb-3">
+                  Le tournoi est ouvert aux combattants âgés de 18 à 36 ans révolus au jour de l'événement, titulaires
+                  d'une licence sportive de combat en cours de validité (MMA, Pancrace, Sambo de combat, Lutte ou Boxe
+                  Thaïlandaise).
+                </p>
+                <p class="leading-relaxed text-body-sm text-neutral-500">
+                  <strong>Programme antidopage :</strong> Des contrôles inopinés par prélèvement d'urine et de sang sont
+                  effectués dès l'arrivée au complexe sous l'égide des délégués de l'Agence Nationale Antidopage. Tout
+                  refus équivaut à une disqualification immédiate avec retenue de prime.
+                </p>
+              </div>
+            </div>
+            <!-- Item 3 : Équipement obligatoire -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm">
+              <button
+                class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                onclick="toggleAccordion('rule-3')" type="button">
+                <div class="flex items-center gap-4">
+                  <span
+                    class="w-8 h-8 rounded bg-blue-50 text-secondary-container font-headline-sm flex items-center justify-center font-bold">03</span>
+                  <span
+                    class="font-headline-sm text-headline-sm text-neutral-900 uppercase font-bold group-hover:text-secondary-container transition-colors">
+                    Équipement Obligatoire &amp; Fournitures NIZAL
+                  </span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-neutral-400 group-hover:text-secondary-container transition-transform duration-300"
+                  id="icon-rule-3">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 pt-1 text-neutral-600 font-body-md border-t border-neutral-100 hidden"
+                id="content-rule-3">
+                <ul class="space-y-2 text-body-sm leading-relaxed">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-emerald-600 text-[18px]">check</span>
+                    <strong>Gants de combat NIZAL Pro 4oz :</strong> Fournis scellés par l'organisation lors du
+                    vestiaire, certifiés conformes.
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-emerald-600 text-[18px]">check</span>
+                    <strong>Protège-dents thermoformé ou sur mesure :</strong> Obligatoire, vérifié par l'arbitre avant
+                    chaque entrée.
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-emerald-600 text-[18px]">check</span>
+                    <strong>Protection pelvienne (coquille rigide) :</strong> Obligatoire pour toutes les catégories
+                    masculines.
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-emerald-600 text-[18px]">check</span>
+                    <strong>Short de combat réglementaire :</strong> Sans poches, sans fermetures éclair ni boucles
+                    métalliques.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Item 4 : Documents & Bilans Médicaux -->
+            <div class="bg-white rounded-xl border border-neutral-200 overflow-hidden shadow-sm">
+              <button
+                class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
+                onclick="toggleAccordion('rule-4')" type="button">
+                <div class="flex items-center gap-4">
+                  <span
+                    class="w-8 h-8 rounded bg-blue-50 text-secondary-container font-headline-sm flex items-center justify-center font-bold">04</span>
+                  <span
+                    class="font-headline-sm text-headline-sm text-neutral-900 uppercase font-bold group-hover:text-secondary-container transition-colors">
+                    Dossier Médical &amp; Justificatifs Requis
+                  </span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-neutral-400 group-hover:text-secondary-container transition-transform duration-300"
+                  id="icon-rule-4">expand_more</span>
+              </button>
+              <div class="px-6 pb-6 pt-1 text-neutral-600 font-body-md border-t border-neutral-100 hidden"
+                id="content-rule-4">
+                <p class="leading-relaxed mb-3">
+                  Le dossier médical complet doit être impérativement téléversé sur la plateforme d'inscription avant le
+                  <strong>31 Mai 2026 à 23h59</strong> :
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-body-sm">
+                  <div class="p-3 bg-neutral-50 rounded border border-neutral-200">
+                    <strong>1. Certificat d'aptitude :</strong> Délivré par un médecin du sport daté de moins de 3 mois.
+                  </div>
+                  <div class="p-3 bg-neutral-50 rounded border border-neutral-200">
+                    <strong>2. Sérologie sanguine :</strong> VIH 1 &amp; 2, Hépatite B (Ag HBs), Hépatite C (Ac
+                    anti-VHC) négatifs de moins de 6 mois.
+                  </div>
+                  <div class="p-3 bg-neutral-50 rounded border border-neutral-200">
+                    <strong>3. IRM ou Scanner cérébral :</strong> Sans anomalie structurelle daté de moins de 2 ans.
+                  </div>
+                  <div class="p-3 bg-neutral-50 rounded border border-neutral-200">
+                    <strong>4. Examen ophtalmologique :</strong> Fond d'œil attestant l'absence de lésion rétinienne.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- LOCALISATION & ACCÈS À L'ARÈNE -->
+      <section class="w-full bg-white py-14 border-b border-neutral-200">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Informations d'accès -->
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <span
+                  class="font-label-md text-label-md uppercase tracking-wider text-secondary-container font-bold">Localisation
+                  officielle</span>
+                <h2 class="font-headline-lg text-headline-lg uppercase text-neutral-900 tracking-tight mt-1">
+                  Coupole Olympique d'Alger
+                </h2>
+                <p class="font-body-md text-body-md text-neutral-600 mt-2">
+                  Complexe Olympique Mohamed Boudiaf, RN 36, Chéraga / Dely Ibrahim, Alger, Algérie.
+                </p>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                  <span
+                    class="material-symbols-outlined text-secondary-container text-[24px] mt-0.5">airport_shuttle</span>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 font-bold">Navettes Athlètes
+                      &amp; Équipes</h3>
+                    <p class="font-body-sm text-body-sm text-neutral-600">
+                      Départs cadencés toutes les 30 minutes depuis les hôtels officiels des délégations (Sheraton Club
+                      des Pins &amp; Holiday Inn Alger).
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                  <span
+                    class="material-symbols-outlined text-secondary-container text-[24px] mt-0.5">local_parking</span>
+                  <div>
+                    <h3 class="font-headline-sm text-headline-sm uppercase text-neutral-900 font-bold">Parking Privé
+                      &amp; Sécurisé</h3>
+                    <p class="font-body-sm text-body-sm text-neutral-600">
+                      Parking P1 réservé aux combattants et entraîneurs accrédités sur présentation du QR code d'accès
+                      délivré lors de l'inscription.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-2 flex flex-wrap items-center gap-4">
+                <a class="inline-flex items-center gap-2 px-6 py-3.5 bg-secondary-container hover:bg-blue-700 text-white font-label-lg text-label-lg uppercase tracking-wider rounded shadow transition-all"
+                  href="https://maps.google.com/?q=Coupole+Olympique+Mohamed+Boudiaf+Alger" rel="noopener noreferrer"
+                  target="_blank">
+                  <span class="material-symbols-outlined text-[20px]">near_me</span>
+                  <span class="">Voir l'itinéraire Google Maps</span>
+                </a>
+                <span class="text-xs text-neutral-500 font-mono">GPS: 36.7584° N, 2.9981° E</span>
+              </div>
+            </div>
+            <!-- Carte visuelle stylisée via data-location pipeline -->
+            <div class="lg:col-span-6">
+              <div class="relative rounded-2xl overflow-hidden border border-neutral-200 shadow-lg">
+                <div class="w-full h-80 md:h-96 bg-cover bg-center"
+                  data-alt="Photographie architecturale extérieure sous un ciel bleu dégagé de la grande Coupole Olympique Mohamed Boudiaf à Alger avec ses vastes esplanades et son infrastructure sportive moderne"
+                  data-location="Coupole Mohamed Boudiaf, Algiers, Algeria"
+                  style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiG--SyL4L9Ch2y-RWgv6BbGPF8WLpK5YIQoHwPPSlT5unJ4QGiPZ1h_qdH9QuTKdTi8Qi86P1VfqLn2tVbk3DBofZRVaxrqsUHFLiIG1RF6ymy2YFefvbsOXQQsB4Wa5JKvsPEze7cUKFVd0elFKchnI2e2E9qJq_k3IGKhWw2PcNdXMlgFUbu2ndQsWZHX6u-g-u5vVVDxvz81JbrDFx624O7_u1WiluwQzBaqjzuAc7SrK_eWMr')">
+                </div>
+                <!-- Pastille Repère Cartographique -->
+                <div
+                  class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-neutral-200 shadow-md flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-primary-container text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">pin_drop</span>
+                  </div>
+                  <div>
+                    <p class="font-headline-sm text-headline-sm uppercase text-neutral-900 font-bold">Arène Principale
+                    </p>
+                    <p class="text-xs text-neutral-500">Accès VIP &amp; Boxeurs Porte Sud</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- APPEL À L'ACTION FINAL SUR FOND BLANC AVEC ACCENT ROUGE -->
+      <section class="w-full bg-white py-16">
+        <div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin">
+
+        </div>
+      </section>
+    </div>
+    <!-- SCRIPT VANILLA JS : INTERACTION ACCORDÉONS -->
+    <script>
+      function toggleAccordion(id) {
+        var content = document.getElementById('content-' + id);
+        var icon = document.getElementById('icon-' + id);
+        if (!content || !icon) return;
+
+        var isHidden = content.classList.contains('hidden');
+
+        // Refermer tous les accordéons
+        var allContents = document.querySelectorAll('[id^="content-rule-"]');
+        var allIcons = document.querySelectorAll('[id^="icon-rule-"]');
+
+        allContents.forEach(function (el) {
+          el.classList.add('hidden');
+        });
+        allIcons.forEach(function (el) {
+          el.textContent = 'expand_more';
+          el.classList.remove('rotate-180');
+        });
+
+        // Ouvrir si c'était caché
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.textContent = 'expand_less';
+          icon.classList.add('rotate-180');
+        }
+      }
+
+      // Ouvrir le premier accordéon par défaut au chargement
+      document.addEventListener('DOMContentLoaded', function () {
+        toggleAccordion('rule-1');
+      });
+    </script>
+  </main>
+  <footer class="w-full bg-surface-container-low  shadow-[0_1px_8px_rgba(0,0,0,0.02)]">
+    <div class="max-w-7xl mx-auto px-gutter py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm"><span
+              class="font-headline-md text-headline-md uppercase tracking-wider text-on-surface">NIZAL</span><span
+              class="w-2 h-2 rounded-full bg-primary-container"></span></div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Le monde des sports de combat, réuni au
+            même endroit. Tournois, classements et billetterie officielle.</p>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Navigation</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="actualites" href="../boutique/shop.html">Actualités</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="athletes" href="../boutique/shop.html">Athlètes</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="evenements" href="../boutique/shop.html">Événements</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="boutique" href="../boutique/shop.html">Boutique</a></nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Informations</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-secondary font-body-md"><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="a-propos" href="../boutique/shop.html">À propos</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="contact" href="../boutique/shop.html">Contact</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="faq" href="../boutique/shop.html">FAQ</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="conditions-generales" href="../boutique/shop.html">Conditions générales</a><a
+              class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors"
+              data-path="politique-de-confidentialite" href="../boutique/shop.html">Politique de confidentialité</a>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-space-sm"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Suivez-nous</span>
+          <div class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><a
+              class="hover:text-on-surface transition-colors" href="../boutique/shop.html">Instagram</a><a
+              class="hover:text-on-surface transition-colors" href="../boutique/shop.html">Facebook</a><a
+              class="hover:text-on-surface transition-colors" href="../boutique/shop.html">YouTube</a><a
+              class="hover:text-on-surface transition-colors" href="../boutique/shop.html">TikTok</a></div>
+        </div>
+      </div>
+      <div
+        class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md">
+        <p class="">© 2026 NIZAL. Tous droits réservés.</p>
+        <p class="uppercase tracking-wider font-label-sm text-label-sm text-on-surface-variant">Plateforme Combat Sports
+          Haute Performance</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./nav.js"></script>
+
+</body>
+
+</html>
